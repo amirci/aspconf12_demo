@@ -27,13 +27,13 @@ namespace MovieLibrary.Website.Controllers
         {
             this._library.Add(movie);
 
-            return Redirect("Index");
+            return Redirect("Movies");
         }
 
         [HttpDelete]
         public ActionResult Destroy(int id)
         {
-            return Redirect("Index");
+            return Json("ok");
         }
     }
 }
