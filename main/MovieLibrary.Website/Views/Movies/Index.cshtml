@@ -19,28 +19,20 @@
         <tbody>
             @foreach (var movie in Model)
             {
-                <tr>
+                <tr data-id="@movie.Id" class="movie">
                     <td>@movie.Id</td>
                     <td>@movie.Title</td>
                     <td>@movie.ReleaseDate.ToString("d MMM yyyy")</td>
-                    <td>@Html.ActionLink("Delete", "Destroy", new {id = movie.Id}, new { onclick = "deleteMovie(" + movie.Id +"); return false;"})</td>
+                    <td>
+                        <a href="#" class="btn" data-confirmprompt="Are you sure you want to delete @movie.Title?">
+                            <i class="icon-trash"></i>                            
+                            Delete
+                        </a>
+                    </td>
                 </tr>
             }
         </tbody>
     </table>
-    <script type="text/javascript">
-        function deleteMovie(id) {
-            if (confirm("Do you want to delete the movie?")) {
-                $.ajax({
-                    url: "/movies/" + id,
-                    type: 'DELETE',
-                    success: function () { window.location = '/'; },
-                    error: function () { alert("I'm sorry something failed!"); }
-                });
-            }
-            return false;
-        }
-    </script>
 }
 else
 {
