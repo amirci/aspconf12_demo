@@ -22,5 +22,7 @@ namespace MovieLibrary.Core
         /// </summary>
         /// <param name="movie">movie to be added</param>
         void Add(IMovie movie);
+
+        void Remove(int id);
     }
 }

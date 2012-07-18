@@ -13,7 +13,7 @@
                 <th>Id</th>
                 <th>Title</th>
                 <th>Release Date</th>
-                <th></th>
+                <th>Actions</th>
             </tr>
         </thead>    
         <tbody>
@@ -31,7 +31,12 @@
     <script type="text/javascript">
         function deleteMovie(id) {
             if (confirm("Do you want to delete the movie?")) {
-                $.ajax({ url: "/movies/" + id, type: 'DELETE' });
+                $.ajax({
+                    url: "/movies/" + id,
+                    type: 'DELETE',
+                    success: function () { window.location = '/'; },
+                    error: function () { alert("I'm sorry something failed!"); }
+                });
             }
             return false;
         }

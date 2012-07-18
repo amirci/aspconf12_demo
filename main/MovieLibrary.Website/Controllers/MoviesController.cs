@@ -33,6 +33,8 @@ namespace MovieLibrary.Website.Controllers
         [HttpDelete]
         public ActionResult Destroy(int id)
         {
+            this._library.Remove(id);
+
             return Json("ok");
         }
     }
