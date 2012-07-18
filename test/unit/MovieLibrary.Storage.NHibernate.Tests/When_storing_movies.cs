@@ -1,5 +1,4 @@
-﻿using System;
-using FluentNHibernate.Testing;
+﻿using FluentNHibernate.Testing;
 using MovieLibrary.Core;
 using MavenThought.Commons.Testing;
 

@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MavenThought.Commons">
-      <HintPath>..\..\..\packages\maventhought.commons.0.9.4\lib\MavenThought.Commons.dll</HintPath>
+      <HintPath>..\..\..\packages\maventhought.commons.0.9.7\lib\MavenThought.Commons.dll</HintPath>
     </Reference>
     <Reference Include="MavenThought.Commons.Testing.NUnit">
       <HintPath>..\..\..\packages\maventhought.testing.nunit.0.3.8\lib\NET35\MavenThought.Commons.Testing.NUnit.dll</HintPath>
