@@ -29,5 +29,11 @@ namespace MovieLibrary.Website.Controllers
 
             return Redirect("Index");
         }
+
+        [HttpDelete]
+        public ActionResult Destroy(int id)
+        {
+            return Redirect("Index");
+        }
     }
 }

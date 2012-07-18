@@ -12,14 +12,16 @@
             <tr>
                 <th>Title</th>
                 <th>Release Date</th>
+                <th></th>
             </tr>
         </thead>    
         <tbody>
             @foreach (var movie in Model)
             {
-                <tr class="movie">
+                <tr>
                     <td>@movie.Title</td>
                     <td>@movie.ReleaseDate.ToString("d MMM yyyy")</td>
+                    <td>@Html.ActionLink("Delete", "Destroy", new {id = movie.Id})</td>
                 </tr>
             }
         </tbody>

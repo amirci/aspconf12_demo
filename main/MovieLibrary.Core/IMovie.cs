@@ -16,5 +16,7 @@ namespace MovieLibrary.Core
         /// Gets or sets when the movie was released
         /// </summary>
         DateTime ReleaseDate { get; set; }
+
+        int Id { get; }
     }
 }
