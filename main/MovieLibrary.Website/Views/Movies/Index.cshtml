@@ -5,21 +5,37 @@
     ViewBag.Title = "Browse Movies";
 }
 
-<table>
-    <thead>
-        <tr>
-            <td>Title</td>
-            <td>Release Date</td>
-        </tr>
-    </thead>    
-    <tbody>
-        @foreach(var movie in Model) {
-            <tr class="movie">
-                <td>@movie.Title</td>
-                <td>@movie.ReleaseDate.ToString("d MMM yyyy")</td>
+@if (Model.Any())
+{
+    <table class="movies">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Release Date</th>
+                <th>Actions</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>    
+        <tbody>
+            @foreach (var movie in Model)
+            {
+                <tr data-id="@movie.Id" class="movie">
+                    <td>@movie.Id</td>
+                    <td>@movie.Title</td>
+                    <td>@movie.ReleaseDate.ToString("d MMM yyyy")</td>
+                    <td>
+                        <a href="#" class="btn" data-confirmprompt="Are you sure you want to delete @movie.Title?">
+                            <i class="icon-trash"></i>                            
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h2 id="notice">Sorry no movies available!</h2>    
+}
 
-<h2 id="notice">Sorry no movies available!</h2>

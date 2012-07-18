@@ -40,6 +40,11 @@ namespace MovieLibrary.Storage.NHibernate
             this._factory.SaveOrUpdate(element);
         }
 
+        public void Remove(int id)
+        {
+            this._factory.AutoCommit(s => s.Delete(s.Load<IMovie>(id)));
+        }
+
         /// <summary>
         /// Gets the collection of media
         /// </summary>

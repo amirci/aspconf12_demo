@@ -1,13 +1,5 @@
-﻿using System.Web.Configuration;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
-using Castle.MicroKernel.Registration;
-using Castle.Windsor;
-using CommonServiceLocator.WindsorAdapter;
-using Microsoft.Practices.ServiceLocation;
-using MovieLibrary.Core;
-using MovieLibrary.Storage.NHibernate;
-using MovieLibrary.Website.Controllers;
 
 namespace MovieLibrary.Website
 {
@@ -25,12 +17,7 @@ namespace MovieLibrary.Website
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-                "Default", // Route name
-                "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "Movies", action = "Index", id = UrlParameter.Optional } // Parameter defaults
-            );
-
+            routes.IgnoreRoute("{*favicon}", new { favicon = @"(.*/)?favicon.ico(/.*)?" });
         }
 
         protected void Application_Start()
@@ -46,6 +33,7 @@ namespace MovieLibrary.Website
 
         private static void SetupContainer()
         {
+            /*
             var container = new WindsorContainer();
 
             // Get the configuration object to access the related Web.config file.
@@ -59,6 +47,7 @@ namespace MovieLibrary.Website
             ServiceLocator.SetLocatorProvider(() => new WindsorServiceLocator(container));
 
             DependencyResolver.SetResolver(ServiceLocator.Current);
+             * */
         }
     }
 }

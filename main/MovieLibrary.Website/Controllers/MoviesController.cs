@@ -17,5 +17,30 @@ namespace MovieLibrary.Website.Controllers
             return View(this._library.Contents);
         }
 
+        public ActionResult New()
+        {
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("_movieForm");
+            }
+
+            return View(new Movie());
+        }
+
+        [HttpPost]
+        public ActionResult Create(Movie movie)
+        {
+            this._library.Add(movie);
+
+            return Redirect("Movies");
+        }
+
+        [HttpDelete]
+        public ActionResult Destroy(int id)
+        {
+            this._library.Remove(id);
+
+            return Json("ok");
+        }
     }
 }
