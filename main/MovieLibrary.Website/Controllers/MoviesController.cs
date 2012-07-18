@@ -17,9 +17,17 @@ namespace MovieLibrary.Website.Controllers
             return View(this._library.Contents);
         }
 
-        public ActionResult Create()
+        public ActionResult New()
         {
-            return null;
+            return View(new Movie());
+        }
+
+        [HttpPost]
+        public ActionResult Create(Movie movie)
+        {
+            this._library.Add(movie);
+
+            return Redirect("Index");
         }
     }
 }

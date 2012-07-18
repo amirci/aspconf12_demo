@@ -63,7 +63,9 @@ namespace MovieLibrary.Website.App_Start
             kernel
                 .Bind<IMovieLibrary>()
                 .To<SimpleMovieLibrary>()
+                .InSingletonScope()
                 .WithConstructorArgument("databaseFile", dbFile);
+
         }        
     }
 }

@@ -4,7 +4,7 @@
 
 		font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 		font-size: 12px;
-		margin: 45px;
+		margin-left: 15px;
 		width: 480px;
 		text-align: left;
 		border-collapse: collapse;
@@ -17,15 +17,15 @@
 			color: #039;
 			background: #b9c9fe;
 
-			td.movie
-			{
-				padding: 8px;
-				background: #e8edff;
-				border-top: 1px solid #fff;
-				color: #669;
-			}
 		}
 
+		td
+		{
+			padding: 8px;
+			background: #e8edff;
+			border-top: 1px solid #fff;
+			color: #669;
+		}
 		tbody tr:hover td
 		{
 			background: #d0dafd;

@@ -1,7 +1,7 @@
 body .movies {
   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
   font-size: 12px;
-  margin: 45px;
+  margin-left: 15px;
   width: 480px;
   text-align: left;
   border-collapse: collapse; }
@@ -11,11 +11,11 @@ body .movies {
     font-size: 13px;
     color: #039;
     background: #b9c9fe; }
-    body .movies th td.movie {
-      padding: 8px;
-      background: #e8edff;
-      border-top: 1px solid #fff;
-      color: #669; }
+  body .movies td {
+    padding: 8px;
+    background: #e8edff;
+    border-top: 1px solid #fff;
+    color: #669; }
   body .movies tbody tr:hover td {
     background: #d0dafd; }
 
