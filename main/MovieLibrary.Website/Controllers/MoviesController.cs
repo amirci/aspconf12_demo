@@ -19,6 +19,11 @@ namespace MovieLibrary.Website.Controllers
 
         public ActionResult New()
         {
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("_movieForm");
+            }
+
             return View(new Movie());
         }
 
