@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace MovieLibrary.Core
 {
@@ -10,6 +11,7 @@ namespace MovieLibrary.Core
         /// <summary>
         /// Gets the title of the movie
         /// </summary>
+        [Required]
         string Title { get; }
 
         /// <summary>

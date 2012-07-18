@@ -111,6 +111,9 @@
     <Content Include="Content\movies.css">
       <DependentUpon>movies.scss</DependentUpon>
     </Content>
+    <Content Include="Content\Site.css">
+      <DependentUpon>Site.scss</DependentUpon>
+    </Content>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -166,7 +169,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <None Include="Content\Site.scss" />
     <Content Include="README.jQuery.vsdoc.txt" />
     <Content Include="Scripts\jquery-1.5.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.5.1.js" />
