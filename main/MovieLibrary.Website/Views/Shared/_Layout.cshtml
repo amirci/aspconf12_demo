@@ -5,7 +5,10 @@
     <title>MovieLibrary - @ViewBag.Title</title>
     @Html.Css("Site.css")
     @Html.Css("movies.css")
-    @Html.Script("jquery-1.7.2.min.js")
+    @Html.Script("jquery-1.7.2.min.js", "jquery-1.7.2.js")
+    @Html.Script("jquery.validate.min.js", "jquery.validate.js")
+    @Html.Script("jquery.validate.unobtrusive.min.js", "jquery.validate.unobtrusive.js")
+    @Html.Script("jquery.unobtrusive-ajax.min.js", "jquery.unobtrusive-ajax.js")
 </head>
 
 <body>
@@ -13,8 +16,8 @@
       Movie Library
     </div>
     <div id="menu">
-      @Html.ActionLink( "Browse contents", "Index", "Movies" )
-      @Html.ActionLink( "Add Movies", "New", "Movies" )
+      @Html.ActionLink("Browse contents", "Index", "Movies")
+      @Html.ActionLink("Add Movies", "New", "Movies")
     </div>
     <div id="content">
         @RenderBody()
